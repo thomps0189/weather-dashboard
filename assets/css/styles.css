@@ -1,0 +1,11 @@
+:root {
+ --primary: #0077b6;
+}
+
+body {
+    margin: 0;
+}
+header h1 {
+    background-color: var(--primary);
+    margin: 0;
+}
