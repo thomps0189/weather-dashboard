@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <h1>Weather Dashboard</h1>
+
+    <section>
+        <h2>Search for City</h2>
+        <form class="form" id="location">
+            <input name="city-state" type="text" id="location-input" placeholder="City and State">
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <ul>
+            <li class="city-name">Name of City</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="city-name-submitted">Weather For: <span id="location-search-name"></span></h2>
+        <div id="weather-info"></div>
+    </section>
+
+    <section>
+        <h2>5-Day Forecast:</h2>
+    </section>
+
+    <script src="./assets/javascript/index.js"></script>
+</body>
+</html>
