@@ -1,6 +1,7 @@
 var locationFormEl = document.querySelector("#location")
 var locationInputEl = document.querySelector("#location-input");
 var city = document.getElementById("location-input").value;
+ 
 
 let getWeatherData = {
     search: function() {
@@ -25,8 +26,13 @@ let getWeatherData = {
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
     },
 
-    
+    search: function() {
+        this.fetchWeather(document.querySelector(".location-input").value);
+    }
 };
 
 
-document.querySelector(".btn").addEventListener("click", getWeatherData.search());
+document.querySelector(".btn").addEventListener("click", function() {
+    getWeatherData.search();
+});
+
