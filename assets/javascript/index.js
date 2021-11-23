@@ -1,15 +1,20 @@
 var locationFormEl = document.querySelector("#location")
 var locationInputEl = document.querySelector("#location-input");
-var city = document.getElementById("location-input").value;
+var city = document.getElementById("location-input");
  
+document.querySelector(".btn").addEventListener("click", function() {
+    getWeatherData.search();
+
+    
+});
 
 let getWeatherData = {
     search: function() {
-        this.fetchWeather(document.querySelector(".city-state").value);
+        this.fetchWeather(document.querySelector("#location-input").value);
     },
     
     fetchWeather: function(city) {
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=ba3af0c57267c9b751ea6ef5a926e30c")
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city.value + "&units=imperial&appid=ba3af0c57267c9b751ea6ef5a926e30c")
         .then((response) => response.json())
         .then((data) => this.displayWeather(data))
     },
@@ -32,7 +37,5 @@ let getWeatherData = {
 };
 
 
-document.querySelector(".btn").addEventListener("click", function() {
-    getWeatherData.search();
-});
+
 
